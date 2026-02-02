@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // This is important for path mapping to work
+    "paths": {
+      "@root/*": ["./*"], // Maps @root/ to the root folder
+      "@/*": ["./src/*"] // Maps @/ to the src folder
+    }
+  }
+}

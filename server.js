@@ -9,9 +9,9 @@ const responseFormat = require("./src/middlewares/responseFormat");
 const { apiRateLimiter } = require("./src/middlewares/rateLimiter");
 const notFoundHandler = require("./src/middlewares/notFoundHandler");
 const exceptionHandler = require("./src/middlewares/exceptionHandler");
+const appConfig = require("./src/configs/app.config");
 
 const app = express();
-const port = 3000;
 
 app.use(responseFormat);
 app.use(express.json());
@@ -22,6 +22,6 @@ app.use("/api", routes);
 app.use(notFoundHandler);
 app.use(exceptionHandler);
 
-app.listen(port, () => {
-  console.log("Server running on port: ", port);
+app.listen(appConfig.port, () => {
+  console.log("Server running on port: ", appConfig.port);
 });

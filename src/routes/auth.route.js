@@ -5,8 +5,8 @@ const authRequired = require("../middlewares/authRequired");
 
 router.post("/register", authController.register);
 router.post("/login", authController.login);
-router.post("/logout", authRequired, authController.logout);
 router.post("/refresh-token", authController.generateToken);
 router.get("/me", authRequired, authController.getCurrentUser);
+router.post("/logout", authRequired, authController.logout);
 
 module.exports = router;

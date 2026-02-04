@@ -36,4 +36,4 @@
 
 ## Render Deployment
 
-Link deploy trên Render: [Điền link Render của bạn vào đây]
+Link deploy trên Render: [Deploy Render](https://node-day-6-api.onrender.com)
